@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <meta name="description" content="Sprinkles of Joy Cake – Custom birthday, anniversary & theme cakes in Bangalore. Order online & pay via GPay / PhonePe." />
+  <meta name="theme-color" content="#e11d48" />
+  <title>Sprinkles of Joy Cake | Custom Cakes Bangalore</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#fff1f2',
+              100: '#ffe4e6',
+              200: '#fecdd3',
+              300: '#fda4af',
+              400: '#fb7185',
+              500: '#f43f5e',
+              600: '#e11d48',
+              700: '#be123c',
+              800: '#9f1239',
+              900: '#881337',
+            },
+            cream: '#fdf6f0',
+            chocolate: '#3f2a1d'
+          },
+          fontFamily: {
+            display: ['Playfair Display', 'serif'],
+            sans: ['Inter', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', system-ui, sans-serif; }
+    .font-display { font-family: 'Playfair Display', serif; }
+    .cake-card img { transition: transform 0.4s ease; }
+    .cake-card:hover img { transform: scale(1.05); }
+    .lightbox { display: none; }
+    .lightbox.active { display: flex; }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(12px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-in { animation: fadeIn 0.5s ease forwards; }
+    .size-btn.active, .flavour-btn.active {
+      background-color: #e11d48;
+      color: white;
+      border-color: #e11d48;
+    }
+  </style>
+</head>
+<body class="bg-cream text-chocolate antialiased">
+
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-rose-100 shadow-sm">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="flex items-center justify-between h-16 md:h-20">
+        <a href="#" class="flex items-center gap-2">
+          <div class="w-10 h-10 rounded-full bg-brand-600 flex items-center justify-center text-white font-display text-xl font-bold">S</div>
+          <div>
+            <span class="font-display text-lg md:text-xl font-semibold text-brand-700 leading-tight block">Sprinkles of Joy</span>
+            <span class="text-[10px] uppercase tracking-wider text-brand-500 font-medium">Cake & Food</span>
+          </div>
+        </a>
+        <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
+          <a href="#gallery" class="hover:text-brand-600 transition">Gallery</a>
+          <a href="#menu" class="hover:text-brand-600 transition">Menu & Prices</a>
+          <a href="#order" class="hover:text-brand-600 transition">Order Now</a>
+          <a href="#contact" class="hover:text-brand-600 transition">Contact</a>
+        </nav>
+        <a href="#order" class="bg-brand-600 hover:bg-brand-700 text-white text-sm font-semibold px-4 py-2.5 rounded-full shadow-md shadow-brand-200 transition">
+          Order Cake
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-brand-50 via-cream to-rose-50"></div>
+    <div class="relative max-w-6xl mx-auto px-4 sm:px-6 py-16 md:py-24 lg:py-28">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div class="animate-in">
+          <p class="text-brand-600 font-semibold text-sm uppercase tracking-widest mb-3">Bangalore • Freshly Baked</p>
+          <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-chocolate leading-tight mb-5">
+            Custom Cakes<br/>
+            <span class="text-brand-600">Made with Love</span>
+          </h1>
+          <p class="text-lg text-gray-600 mb-8 max-w-md leading-relaxed">
+            Beautiful theme cakes, birthday cakes, anniversary cakes & more. Order online, pay easily with GPay or PhonePe, and celebrate with joy.
+          </p>
+          <div class="flex flex-wrap gap-3">
+            <a href="#order" class="inline-flex items-center gap-2 bg-brand-600 hover:bg-brand-700 text-white font-semibold px-6 py-3.5 rounded-full shadow-lg shadow-brand-200 transition">
+              Place Order
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+            </a>
+            <a href="#gallery" class="inline-flex items-center gap-2 bg-white hover:bg-rose-50 text-brand-700 font-semibold px-6 py-3.5 rounded-full border border-brand-200 transition">
+              View Gallery
+            </a>
+          </div>
+          <div class="mt-10 flex items-center gap-6 text-sm text-gray-500">
+            <div class="flex items-center gap-1.5">
+              <svg class="w-5 h-5 text-brand-500" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              <span>Home-baked quality</span>
+            </div>
+            <div class="flex items-center gap-1.5">
+              <svg class="w-5 h-5 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+              <span>T. Dasarahalli, Bangalore</span>
+            </div>
+          </div>
+        </div>
+        <div class="relative animate-in" style="animation-delay: 0.15s">
+          <div class="aspect-square rounded-3xl overflow-hidden shadow-2xl shadow-brand-100 border-4 border-white rotate-2">
+            <img src="public/gallery/IMG_7034.jpg" alt="Beautiful custom cakes by Sprinkles of Joy" class="w-full h-full object-cover" />
+          </div>
+          <div class="absolute -bottom-4 -left-4 bg-white rounded-2xl shadow-xl p-4 border border-rose-100">
+            <p class="text-xs text-gray-500">Starting from</p>
+            <p class="font-display text-2xl font-bold text-brand-600">₹499</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section id="gallery" class="py-16 md:py-24 bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-12">
+        <h2 class="font-display text-3xl md:text-4xl font-bold text-chocolate mb-3">Our Cake Gallery</h2>
+        <p class="text-gray-600 max-w-xl mx-auto">Real cakes made for real celebrations. Birthday themes, cartoon characters, elegant designs & more.</p>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-5" id="gallery-grid">
+        <button class="cake-card group relative aspect-square rounded-2xl overflow-hidden bg-rose-50 focus:outline-none focus:ring-2 focus:ring-brand-500" data-src="public/gallery/IMG_7038.jpg" onclick="openLightbox(this)">
+          <img src="public/gallery/IMG_7038.jpg" alt="Custom cakes collection" class="w-full h-full object-cover" loading="lazy" />
+          <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition flex items-end p-3">
+            <span class="text-white text-sm font-medium opacity-0 group-hover:opacity-100 transition">View</span>
+          </div>
+        </button>
+        <button class="cake-card group relative aspect-square rounded-2xl overflow-hidden bg-rose-50 focus:outline-none focus:ring-2 focus:ring-brand-500" data-src="public/gallery/IMG_7037.jpg" onclick="openLightbox(this)">
+          <img src="public/gallery/IMG_7037.jpg" alt="Theme cakes" class="w-full h-full object-cover" loading="lazy" />
+          <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition flex items-end p-3">
+            <span class="text-white text-sm font-medium opacity-0 group-hover:opacity-100 transition">View</span>
+          </div>
+        </button>
+        <button class="cake-card group relative aspect-square rounded-2xl overflow-hidden bg-rose-50 focus:outline-none focus:ring-2 focus:ring-brand-500" data-src="public/gallery/IMG_7036.jpg" onclick="openLightbox(this)">
+          <img src="public/gallery/IMG_7036.jpg" alt="Birthday & anniversary cakes" class="w-full h-full object-cover" loading="lazy" />
+          <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition flex items-end p-3">
+            <span class="text-white text-sm font-medium opacity-0 group-hover:opacity-100 transition">View</span>
+          </div>
+        </button>
+        <button class="cake-card group relative aspect-square rounded-2xl overflow-hidden bg-rose-50 focus:outline-none focus:ring-2 focus:ring-brand-500" data-src="public/gallery/IMG_7035.jpg" onclick="openLightbox(this)">
+          <img src="public/gallery/IMG_7035.jpg" alt="Kids theme cakes" class="w-full h-full object-cover" loading="lazy" />
+          <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition flex items-end p-3">
+            <span class="text-white text-sm font-medium opacity-0 group-hover:opacity-100 transition">View</span>
+          </div>
+        </button>
+        <button class="cake-card group relative aspect-square rounded-2xl overflow-hidden bg-rose-50 focus:outline-none focus:ring-2 focus:ring-brand-500" data-src="public/gallery/IMG_7034.jpg" onclick="openLightbox(this)">
+          <img src="public/gallery/IMG_7034.jpg" alt="Barbie, Unicorn & cartoon cakes" class="w-full h-full object-cover" loading="lazy" />
+          <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition flex items-end p-3">
+            <span class="text-white text-sm font-medium opacity-0 group-hover:opacity-100 transition">View</span>
+          </div>
+        </button>
+        <button class="cake-card group relative aspect-square rounded-2xl overflow-hidden bg-rose-50 focus:outline-none focus:ring-2 focus:ring-brand-500" data-src="public/gallery/IMG_7033.jpg" onclick="openLightbox(this)">
+          <img src="public/gallery/IMG_7033.jpg" alt="More custom designs" class="w-full h-full object-cover" loading="lazy" />
+          <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition flex items-end p-3">
+            <span class="text-white text-sm font-medium opacity-0 group-hover:opacity-100 transition">View</span>
+          </div>
+        </button>
+      </div>
+      <p class="text-center text-sm text-gray-500 mt-6">All cakes shown are real orders from our kitchen ❤️</p>
+    </div>
+  </section>
+
+  <!-- Menu & Pricing -->
+  <section id="menu" class="py-16 md:py-24 bg-cream">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-12">
+        <h2 class="font-display text-3xl md:text-4xl font-bold text-chocolate mb-3">Menu & Prices</h2>
+        <p class="text-gray-600 max-w-xl mx-auto">Transparent pricing. Final price may vary slightly based on design complexity and add-ons.</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-white rounded-2xl p-6 shadow-sm border border-rose-100">
+          <h3 class="font-display text-xl font-semibold text-brand-700 mb-1">½ kg</h3>
+          <p class="text-3xl font-bold text-chocolate mb-2">₹499 – ₹799</p>
+          <p class="text-sm text-gray-500 mb-4">Perfect for small celebrations (4–6 people)</p>
+          <ul class="text-sm space-y-1.5 text-gray-600">
+            <li>• Basic designs from ₹499</li>
+            <li>• Theme / photo cakes higher</li>
+            <li>• Multiple flavours available</li>
+          </ul>
+        </div>
+        <div class="bg-white rounded-2xl p-6 shadow-sm border border-rose-100 relative overflow-hidden">
+          <div class="absolute top-3 right-3 bg-brand-600 text-white text-xs font-bold px-2.5 py-1 rounded-full">Popular</div>
+          <h3 class="font-display text-xl font-semibold text-brand-700 mb-1">1 kg</h3>
+          <p class="text-3xl font-bold text-chocolate mb-2">₹899 – ₹1499</p>
+          <p class="text-sm text-gray-500 mb-4">Ideal for birthdays & small parties (8–12 people)</p>
+          <ul class="text-sm space-y-1.5 text-gray-600">
+            <li>• Most popular size</li>
+            <li>• Full theme designs</li>
+            <li>• Cartoon, floral, elegant styles</li>
+          </ul>
+        </div>
+        <div class="bg-white rounded-2xl p-6 shadow-sm border border-rose-100">
+          <h3 class="font-display text-xl font-semibold text-brand-700 mb-1">1.5 – 2 kg+</h3>
+          <p class="text-3xl font-bold text-chocolate mb-2">₹1499+</p>
+          <p class="text-sm text-gray-500 mb-4">Bigger celebrations & multi-tier cakes</p>
+          <ul class="text-sm space-y-1.5 text-gray-600">
+            <li>• Multi-tier available</li>
+            <li>• Heavy decoration / toppers</li>
+            <li>• Custom quotes on request</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mt-10 bg-white rounded-2xl p-6 md:p-8 border border-rose-100">
+        <h3 class="font-display text-xl font-semibold mb-4">Available Flavours</h3>
+        <div class="flex flex-wrap gap-2">
+          <span class="px-3 py-1.5 bg-brand-50 text-brand-700 rounded-full text-sm font-medium">Chocolate</span>
+          <span class="px-3 py-1.5 bg-brand-50 text-brand-700 rounded-full text-sm font-medium">Vanilla</span>
+          <span class="px-3 py-1.5 bg-brand-50 text-brand-700 rounded-full text-sm font-medium">Butterscotch</span>
+          <span class="px-3 py-1.5 bg-brand-50 text-brand-700 rounded-full text-sm font-medium">Black Forest</span>
+          <span class="px-3 py-1.5 bg-brand-50 text-brand-700 rounded-full text-sm font-medium">Red Velvet</span>
+          <span class="px-3 py-1.5 bg-brand-50 text-brand-700 rounded-full text-sm font-medium">Pineapple</span>
+          <span class="px-3 py-1.5 bg-brand-50 text-brand-700 rounded-full text-sm font-medium">Strawberry</span>
+          <span class="px-3 py-1.5 bg-brand-50 text-brand-700 rounded-full text-sm font-medium">Custom flavour</span>
+        </div>
+        <p class="mt-5 text-sm text-gray-500">Need something special? Just tell us in the order form — we love creating custom designs (Barbie, Spiderman, Unicorn, Photo cakes, Wedding cakes & more).</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Order Form + Payment -->
+  <section id="order" class="py-16 md:py-24 bg-white">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-10">
+        <h2 class="font-display text-3xl md:text-4xl font-bold text-chocolate mb-3">Order Your Cake</h2>
+        <p class="text-gray-600">Fill the form → we’ll confirm → pay via GPay / PhonePe → we bake with love.</p>
+      </div>
+
+      <form id="order-form" class="bg-cream rounded-3xl p-6 md:p-8 shadow-sm border border-rose-100 space-y-6">
+        <div class="grid sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-1.5">Your Name *</label>
+            <input type="text" name="name" required placeholder="Full name" class="w-full px-4 py-3 rounded-xl border border-rose-200 focus:border-brand-500 focus:ring-2 focus:ring-brand-100 outline-none transition bg-white" />
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-1.5">Phone / WhatsApp *</label>
+            <input type="tel" name="phone" required placeholder="10-digit mobile" pattern="[0-9]{10}" class="w-full px-4 py-3 rounded-xl border border-rose-200 focus:border-brand-500 focus:ring-2 focus:ring-brand-100 outline-none transition bg-white" />
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-2">Cake Size *</label>
+          <div class="flex flex-wrap gap-2" id="size-options">
+            <button type="button" class="size-btn px-4 py-2.5 rounded-xl border border-rose-200 bg-white text-sm font-medium hover:border-brand-400 transition" data-size="0.5kg" data-price="599">½ kg (₹499–799)</button>
+            <button type="button" class="size-btn active px-4 py-2.5 rounded-xl border border-rose-200 bg-white text-sm font-medium hover:border-brand-400 transition" data-size="1kg" data-price="999">1 kg (₹899–1499)</button>
+            <button type="button" class="size-btn px-4 py-2.5 rounded-xl border border-rose-200 bg-white text-sm font-medium hover:border-brand-400 transition" data-size="1.5kg" data-price="1499">1.5 kg+</button>
+            <button type="button" class="size-btn px-4 py-2.5 rounded-xl border border-rose-200 bg-white text-sm font-medium hover:border-brand-400 transition" data-size="custom" data-price="0">Custom size</button>
+          </div>
+          <input type="hidden" name="size" id="selected-size" value="1kg" />
+        </div>
+
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-2">Flavour *</label>
+          <div class="flex flex-wrap gap-2" id="flavour-options">
+            <button type="button" class="flavour-btn active px-3.5 py-2 rounded-xl border border-rose-200 bg-white text-sm font-medium" data-flavour="Chocolate">Chocolate</button>
+            <button type="button" class="flavour-btn px-3.5 py-2 rounded-xl border border-rose-200 bg-white text-sm font-medium" data-flavour="Vanilla">Vanilla</button>
+            <button type="button" class="flavour-btn px-3.5 py-2 rounded-xl border border-rose-200 bg-white text-sm font-medium" data-flavour="Butterscotch">Butterscotch</button>
+            <button type="button" class="flavour-btn px-3.5 py-2 rounded-xl border border-rose-200 bg-white text-sm font-medium" data-flavour="Black Forest">Black Forest</button>
+            <button type="button" class="flavour-btn px-3.5 py-2 rounded-xl border border-rose-200 bg-white text-sm font-medium" data-flavour="Red Velvet">Red Velvet</button>
+            <button type="button" class="flavour-btn px-3.5 py-2 rounded-xl border border-rose-200 bg-white text-sm font-medium" data-flavour="Other">Other</button>
+          </div>
+          <input type="hidden" name="flavour" id="selected-flavour" value="Chocolate" />
+        </div>
+
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1.5">Theme / Design / Message on Cake</label>
+          <textarea name="theme" rows="3" placeholder="e.g. Spiderman theme, Happy Birthday Arjun, Photo cake of couple, Barbie with pink flowers..." class="w-full px-4 py-3 rounded-xl border border-rose-200 focus:border-brand-500 focus:ring-2 focus:ring-brand-100 outline-none transition bg-white resize-none"></textarea>
+        </div>
+
+        <div class="grid sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-1.5">Delivery / Pickup Date *</label>
+            <input type="date" name="date" required class="w-full px-4 py-3 rounded-xl border border-rose-200 focus:border-brand-500 focus:ring-2 focus:ring-brand-100 outline-none transition bg-white" />
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-1.5">Preferred Time</label>
+            <select name="time" class="w-full px-4 py-3 rounded-xl border border-rose-200 focus:border-brand-500 focus:ring-2 focus:ring-brand-100 outline-none transition bg-white">
+              <option value="Morning">Morning (10 AM – 1 PM)</option>
+              <option value="Afternoon">Afternoon (1 PM – 5 PM)</option>
+              <option value="Evening">Evening (5 PM – 8 PM)</option>
+            </select>
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1.5">Delivery Address (if needed)</label>
+          <textarea name="address" rows="2" placeholder="Full address in Bangalore + landmark" class="w-full px-4 py-3 rounded-xl border border-rose-200 focus:border-brand-500 focus:ring-2 focus:ring-brand-100 outline-none transition bg-white resize-none"></textarea>
+        </div>
+
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1.5">Any special instructions / budget</label>
+          <input type="text" name="notes" placeholder="Budget limit, allergies, extra toppers etc." class="w-full px-4 py-3 rounded-xl border border-rose-200 focus:border-brand-500 focus:ring-2 focus:ring-brand-100 outline-none transition bg-white" />
+        </div>
+
+        <div class="bg-white rounded-xl p-4 border border-brand-100 flex items-center justify-between">
+          <div>
+            <p class="text-sm text-gray-500">Estimated starting price</p>
+            <p class="text-2xl font-bold text-brand-600" id="est-price">₹999</p>
+          </div>
+          <p class="text-xs text-gray-400 text-right max-w-[140px]">Final amount confirmed after design discussion</p>
+        </div>
+
+        <button type="submit" class="w-full bg-brand-600 hover:bg-brand-700 text-white font-semibold py-4 rounded-xl shadow-lg shadow-brand-200 transition flex items-center justify-center gap-2 text-lg">
+          Continue to Payment
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        </button>
+      </form>
+
+      <div id="payment-section" class="hidden mt-8 bg-gradient-to-br from-brand-50 to-rose-50 rounded-3xl p-6 md:p-8 border border-brand-100">
+        <h3 class="font-display text-2xl font-bold text-chocolate mb-2">Almost done! Pay via UPI</h3>
+        <p class="text-gray-600 mb-6">Your order details are ready. Pay the confirmed amount using GPay or PhonePe.</p>
+
+        <div class="bg-white rounded-2xl p-5 mb-6 border border-rose-100">
+          <p class="text-sm text-gray-500 mb-1">Order summary</p>
+          <div id="order-summary" class="text-sm space-y-1 text-gray-700"></div>
+        </div>
+
+        <div class="space-y-4">
+          <div class="bg-white rounded-2xl p-5 border border-rose-100">
+            <p class="text-sm font-medium text-gray-700 mb-3">Pay using UPI ID</p>
+            <div class="flex items-center justify-between bg-cream rounded-xl px-4 py-3 mb-3">
+              <code id="upi-id" class="font-mono text-brand-700 font-semibold">sprinklesofjoy@oksbi</code>
+              <button onclick="copyUpi()" class="text-sm text-brand-600 font-medium hover:underline">Copy</button>
+            </div>
+            <p class="text-xs text-gray-500 mb-4">Replace with your real UPI ID later. Amount will be confirmed by shop.</p>
+
+            <div class="grid grid-cols-2 gap-3">
+              <a id="gpay-link" href="#" class="flex items-center justify-center gap-2 bg-[#1a73e8] hover:bg-blue-700 text-white font-semibold py-3 rounded-xl transition">
+                GPay
+              </a>
+              <a id="phonepe-link" href="#" class="flex items-center justify-center gap-2 bg-[#5f259f] hover:bg-purple-800 text-white font-semibold py-3 rounded-xl transition">
+                PhonePe
+              </a>
+            </div>
+          </div>
+
+          <div class="text-center">
+            <p class="text-sm text-gray-600 mb-3">After payment, send screenshot on WhatsApp</p>
+            <a id="whatsapp-link" href="https://wa.me/91XXXXXXXXXX?text=Hi%2C%20I%20just%20placed%20an%20order%20on%20the%20website" target="_blank" class="inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white font-semibold px-6 py-3 rounded-full transition">
+              Send Order on WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-16 md:py-20 bg-cream">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+        <div>
+          <h2 class="font-display text-3xl font-bold text-chocolate mb-4">Visit or Contact Us</h2>
+          <div class="space-y-4 text-gray-700">
+            <div class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-brand-600 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+              <div>
+                <p class="font-medium">Santosh Nagar near Ayyappa School</p>
+                <p class="text-sm text-gray-500">T. Dasarahalli, Bangalore 560057</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-brand-600 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+              <div>
+                <p class="font-medium">Call / WhatsApp</p>
+                <p class="text-sm text-gray-500">Update with real number</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-brand-600 mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+              <div>
+                <p class="font-medium">Instagram</p>
+                <a href="https://www.instagram.com/sprinkles_of_joy_cake_358/" target="_blank" class="text-sm text-brand-600 hover:underline">@sprinkles_of_joy_cake_358</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white rounded-2xl p-6 shadow-sm border border-rose-100">
+          <h3 class="font-semibold mb-3">Opening Hours</h3>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex justify-between"><span>Monday – Saturday</span><span class="font-medium">9:00 AM – 9:00 PM</span></li>
+            <li class="flex justify-between"><span>Sunday</span><span class="font-medium">10:00 AM – 8:00 PM</span></li>
+          </ul>
+          <p class="mt-4 text-xs text-gray-400">Orders for next day recommended. Same-day possible depending on availability.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-chocolate text-white py-10">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 text-center">
+      <div class="font-display text-2xl font-semibold mb-2">Sprinkles of Joy Cake</div>
+      <p class="text-white/70 text-sm mb-4">Custom cakes made with love in Bangalore</p>
+      <p class="text-white/50 text-xs">© 2026 Sprinkles of Joy Cake. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox fixed inset-0 z-[100] bg-black/90 items-center justify-center p-4" onclick="closeLightbox()">
+    <button class="absolute top-4 right-4 text-white text-3xl font-light" onclick="closeLightbox()">&times;</button>
+    <img id="lightbox-img" src="" alt="Cake" class="max-h-[90vh] max-w-full rounded-lg object-contain" onclick="event.stopPropagation()" />
+  </div>
+
+  <script>
+    document.querySelectorAll('.size-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.size-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        document.getElementById('selected-size').value = btn.dataset.size;
+        const price = btn.dataset.price;
+        document.getElementById('est-price').textContent = price === '0' ? 'Custom quote' : '₹' + price;
+      });
+    });
+
+    document.querySelectorAll('.flavour-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.flavour-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        document.getElementById('selected-flavour').value = btn.dataset.flavour;
+      });
+    });
+
+    document.getElementById('order-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const form = e.target;
+      const data = new FormData(form);
+      const name = data.get('name');
+      const phone = data.get('phone');
+      const size = data.get('size');
+      const flavour = data.get('flavour');
+      const theme = data.get('theme') || 'Not specified';
+      const date = data.get('date');
+      const time = data.get('time');
+      const address = data.get('address') || 'Pickup';
+      const notes = data.get('notes') || '';
+
+      const summary = `
+        <p><strong>${name}</strong> • ${phone}</p>
+        <p>Size: ${size} • Flavour: ${flavour}</p>
+        <p>Theme: ${theme}</p>
+        <p>Date: ${date} (${time})</p>
+        <p>Address: ${address}</p>
+        ${notes ? `<p>Notes: ${notes}</p>` : ''}
+      `;
+      document.getElementById('order-summary').innerHTML = summary;
+
+      const msg = encodeURIComponent(
+        `Hi Sprinkles of Joy Cake! 🎂\n\nI want to order a cake:\n\nName: ${name}\nPhone: ${phone}\nSize: ${size}\nFlavour: ${flavour}\nTheme/Design: ${theme}\nDate: ${date} (${time})\nAddress: ${address}\n${notes ? 'Notes: ' + notes : ''}\n\nPlease confirm price & availability.`
+      );
+      document.getElementById('whatsapp-link').href = `https://wa.me/91XXXXXXXXXX?text=${msg}`;
+
+      const upiId = 'sprinklesofjoy@oksbi';
+      const amount = document.getElementById('est-price').textContent.replace('₹','') || '999';
+      const note = encodeURIComponent(`Cake order - ${name}`);
+      document.getElementById('gpay-link').href = `upi://pay?pa=${upiId}&pn=Sprinkles%20of%20Joy%20Cake&am=${amount}&cu=INR&tn=${note}`;
+      document.getElementById('phonepe-link').href = `upi://pay?pa=${upiId}&pn=Sprinkles%20of%20Joy%20Cake&am=${amount}&cu=INR&tn=${note}`;
+
+      document.getElementById('payment-section').classList.remove('hidden');
+      document.getElementById('payment-section').scrollIntoView({ behavior: 'smooth' });
+    });
+
+    function copyUpi() {
+      const upi = document.getElementById('upi-id').textContent;
+      navigator.clipboard.writeText(upi).then(() => alert('UPI ID copied!'));
+    }
+
+    function openLightbox(btn) {
+      const src = btn.dataset.src;
+      document.getElementById('lightbox-img').src = src;
+      document.getElementById('lightbox').classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    const tomorrow = new Date();
+    tomorrow.setDate(tomorrow.getDate() + 1);
+    document.querySelector('input[name="date"]').min = tomorrow.toISOString().split('T')[0];
+  </script>
+</body>
+</html>
