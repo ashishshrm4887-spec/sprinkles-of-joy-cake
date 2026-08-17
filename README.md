@@ -1,50 +1,59 @@
 # Sprinkles of Joy Cake – Website
 
+**Live soon at:** https://ashishshrm4887-spec.github.io/sprinkles-of-joy-cake/
+
 Professional ordering website for **Sprinkles of Joy Cake**, Bangalore.
 
 ## Features
 - Beautiful mobile-first design
-- Real cake gallery (from your Instagram photos)
-- Clear size & price menu
-- Full order form (name, phone, size, flavour, theme, date, address)
-- **GPay / PhonePe (UPI) payment flow**
-- One-tap WhatsApp order confirmation
+- Real cake gallery
+- Clear size & price menu (½ kg, 1 kg, 1.5 kg+)
+- Full order form
+- **GPay / PhonePe (UPI) payment**
+- WhatsApp order confirmation
 - Location & Instagram linked
 
-## How to use / update (important)
+## Important setup (do these 2 things)
 
 1. **Change UPI ID**  
-   Open `index.html` and search for `sprinklesofjoy@oksbi`  
-   Replace with your real UPI ID (GPay / PhonePe / any bank UPI).
+   Open `index.html` → search for `sprinklesofjoy@oksbi` → replace with your real UPI ID.
 
 2. **Change WhatsApp number**  
-   Search for `91XXXXXXXXXX`  
-   Replace with your real WhatsApp number (with country code 91).
+   Search for `91XXXXXXXXXX` → replace with real number (with 91).
 
-3. **Update phone number** in the Contact section (search for "Update with real number").
+## How to add the cake photos
 
-4. **Add more photos**  
-   Put new cake images inside `public/gallery/` and add more buttons in the Gallery section (copy an existing cake-card).
+The gallery images are large, so please upload them manually:
 
-## How to open / test locally
-Just open `index.html` in any browser (Chrome / Safari on phone works best for UPI links).
+1. Go to the repo: https://github.com/ashishshrm4887-spec/sprinkles-of-joy-cake
+2. Click on the `public/gallery` folder
+3. Click **Add file → Upload files**
+4. Upload these 6 images from your phone/computer:
+   - IMG_7033.jpg
+   - IMG_7034.jpg
+   - IMG_7035.jpg
+   - IMG_7036.jpg
+   - IMG_7037.jpg
+   - IMG_7038.jpg
+5. Commit the changes.
 
-## How to put it live (free)
-1. Create a free account on [Netlify](https://netlify.com) or [Vercel](https://vercel.com) or enable GitHub Pages.
-2. For GitHub Pages: Settings → Pages → Source: Deploy from a branch → main → / (root).
-3. Your website will be live at: https://ashishshrm4887-spec.github.io/sprinkles-of-joy-cake/
+After uploading, the gallery will show all your real cakes.
 
-## Payment flow for customers
-1. Customer fills the order form
-2. Clicks “Continue to Payment”
-3. Sees order summary
-4. Pays via GPay or PhonePe using the UPI ID
-5. Sends payment screenshot + order details on WhatsApp
+## How to make the website live (GitHub Pages)
 
-This is the standard & reliable way used by hundreds of home bakers and small cake shops in India.
+1. Go to the repository → **Settings** → **Pages** (left sidebar)
+2. Under "Source" select **Deploy from a branch**
+3. Branch: `main` → folder: `/ (root)`
+4. Click Save
+5. Wait 1–2 minutes
+6. Your site will be live at:  
+   **https://ashishshrm4887-spec.github.io/sprinkles-of-joy-cake/**
+
+## Local testing
+Just open `index.html` in any browser.
 
 ---
 
 Made with care for Sprinkles of Joy Cake ❤️  
 Location: Santosh Nagar near Ayyappa School, T. Dasarahalli, Bangalore 560057  
-Instagram: @sprinkles_of_joy_cake_358
+Instagram: [@sprinkles_of_joy_cake_358](https://www.instagram.com/sprinkles_of_joy_cake_358/)
